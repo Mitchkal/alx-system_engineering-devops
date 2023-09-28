@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#This script is displaying countsl" 20 time
+#with various badlucks at 9, 4, and 17
+
+count=1
+
+while [ $count -le 20 ]
+do
+    case $count in
+      9)
+        echo "$count"
+        echo "bad luck from Japan"
+        ;;
+      4)
+        echo "$count"
+        echo "bad luck from China"
+        ;;
+      17)
+        echo "$count"
+        echo "bad luck from Italy"
+        ;;
+      *)
+        echo "$count"
+        ;;
+    esac
+ 
+    ((count++))
+done

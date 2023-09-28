@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#This script is displaying "Best School" 10 times
+#with bad luch and good luck
+
+my_string="Best School"
+count=0
+
+while [ $count -lt 10 ]
+do
+    if [[ $count == 7 ]]; then
+        echo "good luck"
+    elif [ $count -eq 3 ]; then
+        echo "bad luck"
+    else
+        echo "$my_string"
+    fi
+    ((count++))
+done

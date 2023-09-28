@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#lists content of current directory aftyer first dash
+
+for file in *; do
+    if [ -f "$file" ] && [[ "$file" != .* ]]; then
+        result=$(echo "$file" | cut -d'-' -f2-)
+	echo "$result"
+    fi
+done
