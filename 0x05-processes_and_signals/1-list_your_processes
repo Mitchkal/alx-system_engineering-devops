@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#displays a list of currently running processses 
+#including those without A TTY in a user oriented
+#format
+
+ps -aux

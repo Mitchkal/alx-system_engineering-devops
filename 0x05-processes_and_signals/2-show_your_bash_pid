@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#displays lines containing bash word, allowing easy identification of ID of bash process
+#shellcheck disable=SC2009
+#does not use grep; has disabled shellcheck from suggesting grep
+
+ps -auxf | grep "bash"
+

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#displays To infinity and beyond indefinitely
+#with a sleep2 between each iteratio, Captures kill signal
+#from other script in another terminal and ignores it, prnting
+#"I am invincible!!! on receiving a SIGTERM signal
+
+message()
+{
+	echo "I am invincible!!!"
+}
+trap "message" SIGTERM
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done

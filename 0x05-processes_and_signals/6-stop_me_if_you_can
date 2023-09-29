@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#stops infinte running process 4-to_infinity and beyond
+#without kill or killall
+#-f fis necessary to find the pid
+
+pkill -f "4-to_infinity_and_beyond"

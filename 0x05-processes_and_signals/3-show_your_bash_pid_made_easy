@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#displays PID together with process name of processes containing the
+#3word bash, Does not use ps
+
+pgrep -l bash

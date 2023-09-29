@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#displays Toinfinity and beyond indefinitely
+#in between each loop iteration , sleep 2
+#one must press ctrl-c to stop
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
