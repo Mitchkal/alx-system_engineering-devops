@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-#displays a list of currently running processses 
-#including those without A TTY in a user oriented
-#format
-
+#displays a list of currently running processses with/without A TTY in a user orient
 ps -aux
