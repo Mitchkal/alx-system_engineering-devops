@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#displays all active IPV4 IPS on machine
+ifconfig | grep "inet addr" | cut -d":" -f2 | cut -d" " -f1
