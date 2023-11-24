@@ -2,5 +2,5 @@
 
 exec { 'pkill killmenow':
   command     => '/usr/bin/pkill -f killmenow',
-  refreshonly => true,
+  refreshonly => true
 }
