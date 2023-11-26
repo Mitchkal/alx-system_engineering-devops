@@ -1,0 +1,6 @@
+# ~/etc/ssh/sshd_config
+Host 18.206.197.179
+    IdentityFile ~/.ssh/school
+    PreferredAuthentications publickey
+    PasswordAuthentication no
+    User ubuntu
