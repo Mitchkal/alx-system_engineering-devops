@@ -1,6 +1,6 @@
 # configures server to authenticate with publick key, no password
 
-file { '/~/etc/.ssh/sshd_config':
+file { '/home/ubuntu/.ssh/config':
   ensure  => present,
   owner   => 'ubuntu',
   group   => 'ubuntu',
