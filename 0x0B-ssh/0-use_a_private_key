@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # connect to server with private rsa ssh key
 
-private_key="~/.ssh/school"
-user="ubuntu"
-server="18.206.197.179"
+# private_key="~/.ssh/school"
+# user="ubuntu"
+# server="18.206.197.179"
 
-ssh -i "$private_key" "$user"@"$server"
+#ssh -i "$private_key" "$user"@"$server" >/dev/null 2>&1
+ssh -i ~/.ssh/school ubuntu@18.206.197.179
