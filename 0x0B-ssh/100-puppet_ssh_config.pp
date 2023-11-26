@@ -1,6 +1,6 @@
-# configures server to authenticate with publick key, no password
+# configures server to authenticate with public key, no password
 
-file { '/home/ubuntu/.ssh/config':
+file { '/etc/ssh/ssh_config':
   ensure  => present,
   owner   => 'ubuntu',
   group   => 'ubuntu',
