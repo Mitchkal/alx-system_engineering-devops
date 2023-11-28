@@ -4,6 +4,8 @@
 sudo apt-get update
 sudo apt-get install -y nginx
 
+#sudo ufw allow 'Nginx HTTP'
+#sudo ufw allow 22
 sudo mkdir -p /var/www/html/
 
 echo "Hello World!" | sudo tee /var/www/html/index.html
@@ -12,5 +14,6 @@ sudo sed -i 's/^\(listen\s\+\)80/\1listen 80/' /etc/nginx/sites-available/defaul
 
 sudo /etc/init.d/nginx restart
 
-sudo ufw allow 'Nginx HTTP'
-sudo ufw --force enable
+#sudo ufw allow 'Nginx HTTP'
+#sudo ufw allow 22
+#sudo ufw --force enable
