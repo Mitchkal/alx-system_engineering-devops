@@ -1,5 +1,5 @@
 # ~/etc/ssh/sshd_config
-Host 18.206.197.179
+Host 54.158.208.173
     IdentityFile ~/.ssh/school
     PreferredAuthentications publickey
     PasswordAuthentication no
