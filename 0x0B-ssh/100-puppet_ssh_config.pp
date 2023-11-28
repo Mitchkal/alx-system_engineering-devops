@@ -6,7 +6,7 @@ file { '/etc/ssh/ssh_config':
   group   => 'ubuntu',
   mode    => '0600',
   content => '
-    Host 54.158.208.173
+    Host 100.25.145.4
         IdentityFile ~/.ssh/school
         PreferredAuthentications publickey
         PasswordAuthentication no

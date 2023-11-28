@@ -3,7 +3,7 @@
 
 # private_key="~/.ssh/school"
 # user="ubuntu"
-# server="18.206.197.179"
+# server="100.25.145.4"
 
 #ssh -i "$private_key" "$user"@"$server" >/dev/null 2>&1
-ssh -i ~/.ssh/school ubuntu@18.206.197.179
+ssh -i ~/.ssh/school ubuntu@100.25.145.4
