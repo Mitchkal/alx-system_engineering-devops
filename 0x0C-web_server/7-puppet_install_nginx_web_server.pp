@@ -19,7 +19,7 @@ file_line{ 'aaaaa':
 # root block
 file { '/var/www/html/index.html':
   ensure   => file
-  content  => 'Hello World!',
+  content  => "Hello World!",
 }
 
 service { 'nginx':
