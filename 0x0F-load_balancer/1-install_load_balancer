@@ -12,7 +12,9 @@ sudo apt-get install -y haproxy=2.8.\*
 sudo sed -i '$ a\
 \
 frontend http-in\n\
+    mode http\n\
     bind *:80\n\
+    option http-keep-alive\n\
     default_backend servers\n\
 \n\
 backend servers\n\
