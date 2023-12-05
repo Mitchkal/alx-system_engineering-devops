@@ -9,7 +9,7 @@ sudo mkdir -p /var/www/html/
 sudo mkdir -p /usr/share/nginx/html
 echo "Hello World!" | sudo tee /var/www/html/index.html
 echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/page_error_404.html
-Add_header="server {\n\tadd_header X-Served-By $hostname;"
+Add_header="server {\n\tadd_header X-Served-By $HOSTNAME;"
 Add_redirect="error_page 404 \/page_error_404.html;\n location \/redirect_me {\n return 301 \$scheme:\/\/www.youtube.com;"
 
 sudo sed -i -E "s/^server \{/$Add_header/" /etc/nginx/sites-available/default
