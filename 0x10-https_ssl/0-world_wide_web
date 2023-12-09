@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# displays information about subdomains
+
+display_info() {
+    local subdomain=$1
+    local domain=$2
+    local record_type=$3
+    local destination=$4
+    echo "The subdomain $subdomain is a $record_type record and points to $destination"
+}
+
+# Audits Subdomains
+audit_subdomains() {
+    local domain=$1
+    subdomains=("www" "lb-01" "web-01" "web-02")
+    for subdomain in "${subdomains[@]}"; do
+        record_type=$(dig +short -t CNAME "$subdomain"."$domain" | awk '{print $2}')
+        destination=$(dig +short "$subdomain"."$domain" | awk '{print $1}')
+        display_info "$subdomain" "$domain" "$record_type" "$destination"
+    done
+}
+
+if [ "$#" -eq 1 ]; then
+    audit_subdomains "$1"
+elif [ "$#" -eq 2 ]; then
+    subdomain=$2
+    record_type=$(dig +short -t CNAME "$subdomain"."$1" | awk '{print $2}')
+    destination=$(dig +short "$subdomain"."$1" | awk '{print $1}')
+    display_info "$subdomain" "$1" "$record_type" "$destination"
+else
+    echo "Usage: $0 <domain> [subdomain]"
+    exit 1
+fi
+
