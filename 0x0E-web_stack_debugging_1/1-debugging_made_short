@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # fixes bug for nginx not running on port 80
 sudo sed -i "s/sites-enabled/sites-available/" /etc/nginx/nginx.conf
-sudo service nginx restart
+sudo systemctl start nginx 
