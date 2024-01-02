@@ -25,11 +25,18 @@ def get_employee_todo_progress(emp_id):
         # completed_tasks = [task for task in todos if task['completed']]
         # comp_tasks = len(completed_tasks)
         # total = len(todos)
+        # employee_name = 'Unknown'
 
+        # for tasks in todos:
         for user in users.json():
             if user.get('id') == int(emp_id):
-                employee_name = user.get('name')
+                employee_name = user.get('username')
                 break
+
+        # for user in users.json():
+        # if user.get('id') == employee_id:
+        # employee_name = user.get('username')
+
         csv_filename = f'{emp_id}.csv'
 
         with open(csv_filename, mode='w', newline='',
