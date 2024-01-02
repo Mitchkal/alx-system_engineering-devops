@@ -41,11 +41,11 @@ def get_employee_todo_progress(emp_id):
 
         with open(csv_filename, mode='w', newline='',
                   encoding='utf-8') as csv_file:
-            csv_writer = csv.writer(csv_file)
 
-            # header = ["USER_ID", "USERNAME",
-            # "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-            # csv_writer.writerow(header)
+            header = ["USER_ID", "USERNAME",
+                      "TASK_COMPLETED_STATUS", "TASK_TITLE"]
+            csv_writer = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
+            csv_writer.writerow(header)
 
             for task in todos:
                 data = [task['userId'], employee_name,
