@@ -40,7 +40,7 @@ def get_employee_todo_progress():
             result = {emp_id: tasks_list}
             all_users_data.append(result)
 
-    json_data = json.dumps(all_users_data, separators=(',', ': '))
+    json_data = json.dumps(all_users_data, separators=(', ', ': '))
 
     json_filename = "todo_all_employees.json"
     with open(json_filename, mode='w', encoding='utf-8') as json_file:
