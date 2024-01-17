@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""module top ten"""
+"""module top ten
+   prints top ten hot posts 
+"""
 import requests
 
 
 def top_ten(subreddit):
-    """querries Reddit API abd returns top ten posts"""
+    """querries Reddit API and returns top ten posts"""
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
 
     headers = {
