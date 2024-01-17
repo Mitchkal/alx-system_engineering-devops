@@ -16,4 +16,4 @@ def top_ten(subreddit):
         for item in top[:10]:
             print(item['data']['title'])
     except Exception as e:
-        return (None)
+        print("None")
