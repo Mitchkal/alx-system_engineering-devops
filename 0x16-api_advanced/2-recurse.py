@@ -32,5 +32,4 @@ def recurse(subreddit, hot_list=[], after=None):
 
         return (hot_list + recurse(subreddit, hot_list=hot_list, after=after))
     except Exception as e:
-        print("Exception found: {}".format(e))
         return (None)
