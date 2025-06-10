@@ -1,0 +1,3 @@
+#!/bin/bash
+DECIMAL=$(( $(echo $WATER | tr 'water' '0-4' | tr -d '.' | sed 's/^/ibase=5;/' | bc) + $(echo $STIR | tr 'stir' '0-3' | tr -d '.' | sed 's/^/ibase=4;/' | bc) ))
+echo "obase=8;$DECIMAL" | bc | tr '0-7' 'bestchol'
